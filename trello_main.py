@@ -1,8 +1,9 @@
 from trello import TrelloClient
+import os
 
 client = TrelloClient(
-    api_key='api-key',
-    api_secret='api_secret'
+    api_key=os.environ['TRELLO_API_KEY'],
+    api_secret=os.environ['TRELLO_API_SECRET']
 )
 
 org_list = client.list_organizations()
