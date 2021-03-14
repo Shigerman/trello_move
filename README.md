@@ -1,2 +1,11 @@
 # trello_move
-This is a script which moves all the cards on my daily-routines-Trello-board from "done" and "doing" to "todo" every day at 7 am so that not to do it manually )
+A script which helps to automate activities with my Trello boards.
+
+### instruments used
+* Python for backend
+* Poetry for virtual environment
+* Raspberry Pi for a server
+
+### activity algorithm
+Find all the cards in my "doing" and "done" daily-routines-Trello-boards >>>
+move all the cards to "todo" every day at 7 am.
