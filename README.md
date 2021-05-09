@@ -12,8 +12,9 @@ move all the cards to "todo" every day at 6 am.
 
 ### install
 ```sh
+python3 - poetry install
 ln -s -f /home/user/trello/trello.service /etc/systemd/system/trello.service
 ln -s -f /home/user/trello/trello.timer /etc/systemd/system/trello.timer
 echo TRELLO_API_KEY=foo > /home/user/trello/.env
-echo TRELLO_API_SECRET=bar > /home/user/trello/.env
+echo TRELLO_API_SECRET=bar >> /home/user/trello/.env
 ```

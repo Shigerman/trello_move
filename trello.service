@@ -5,7 +5,7 @@
 [Unit]
 Description = Trello automation tool
 [Service]
-ExecStart = python3 -m poetry run /home/user/trello/trello_main.py
+ExecStart = python3 -m poetry run python3 /home/user/trello/trello_main.py
 StandardError = journal
 NotifyAccess = all
 [Install]
