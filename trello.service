@@ -1,0 +1,12 @@
+# Systemd  service that starts trello automation tool
+# Assumes:
+# * Trello tools is checked out in /home/user/trello
+# * Python 3.9 is installed system-wide and in PATH
+[Unit]
+Description = Trello automation tool
+[Service]
+ExecStart = python3 -m poetry run /home/user/trello/trello_main.py
+StandardError = journal
+NotifyAccess = all
+[Install]
+WantedBy = multi-user.target

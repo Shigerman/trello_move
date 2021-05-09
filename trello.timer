@@ -1,0 +1,7 @@
+[Unit]
+Description=Timer for Trello re-arrange service
+[Timer]
+OnCalendar=*-*-* 6:0:0
+AccuracySec=10s
+[Install]
+WantedBy=timers.target

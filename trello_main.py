@@ -1,5 +1,8 @@
 from trello import TrelloClient
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 client = TrelloClient(
     api_key=os.environ['TRELLO_API_KEY'],

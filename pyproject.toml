@@ -7,6 +7,7 @@ authors = ["Larisa Shigareva <thelarisa81@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.9"
 py-trello = "^0.17.1"
+python-dotenv = "^0.17.1"
 
 [tool.poetry.dev-dependencies]
 
