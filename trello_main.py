@@ -29,5 +29,5 @@ def move_all_tasks_in_todo(board):
 
 
 for board in family_boards:
-    if "tasks" in board.name:
+    if "tasks" in board.name.lower():
         move_all_tasks_in_todo(board)
