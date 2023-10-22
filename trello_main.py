@@ -28,6 +28,11 @@ def move_all_tasks_in_todo(board):
             list_.move_all_cards(target_list)
 
 
-for board in family_boards:
-    if "tasks" in board.name.lower():
-        move_all_tasks_in_todo(board)
+def main():
+    for board in family_boards:
+        if "tasks" in board.name.lower():
+            move_all_tasks_in_todo(board)
+
+
+if __name__ == "__main__":
+    main()
