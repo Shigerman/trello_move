@@ -1,4 +1,7 @@
 # trello_move
+
+![logo](https://github.com/Shigerman/trello_move/raw/main/trello.jpg)
+
 A script which helps to automate activities with my Trello boards.
 
 ### instruments used
