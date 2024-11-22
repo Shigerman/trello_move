@@ -23,7 +23,7 @@ def main():
     def move_all_tasks_in_todo(board):
         board_lists = board.list_lists()
 
-        target_list = []
+        target_list = None
         for list_ in board_lists:
             spaceless_name = list_.name.lower().replace(" ", "")
             if "todo" in spaceless_name:
@@ -31,7 +31,9 @@ def main():
 
         for list_ in board_lists:
             if list_ is not target_list:
-                list_.move_all_cards(target_list)
+                # Ability to ignore a list by starting a name with "_"
+                if not list.name.startswith("_"):
+                    list_.move_all_cards(target_list)
 
 
     for board in family_boards:
