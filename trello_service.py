@@ -1,11 +1,17 @@
 from datetime import datetime
 import time
+import sys
 
 from trello_main import main
 
 MOVE_HOUR = 4
 
-print("service started", flush=True)
+if next(iter(sys.argv[1:])) == "--now":
+    print("executing NOW", flush=True)
+    main()
+else:
+    print("service started", flush=True)
+
 while True:
     now = datetime.now()
     if now.hour == MOVE_HOUR and now.minute == 0:

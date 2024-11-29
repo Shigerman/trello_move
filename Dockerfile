@@ -1,7 +1,6 @@
-FROM python:3.9
+FROM ghcr.io/astral-sh/uv:python3.9-bookworm-slim
 WORKDIR /app
-COPY pyproject.toml poetry.lock ./
-RUN pip install poetry
-RUN poetry install
+COPY pyproject.toml uv.lock ./
+RUN uv sync
 COPY *.py ./
-ENTRYPOINT poetry run python trello_service.py
+ENTRYPOINT ["uv", "run", "python", "trello_service.py"]

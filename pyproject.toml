@@ -1,16 +1,17 @@
-[tool.poetry]
-name = "trello_move"
-version = "0.1.0"
-description = ""
-authors = ["Larisa Shigareva <thelarisa81@gmail.com>"]
-
-[tool.poetry.dependencies]
-python = "^3.9"
-py-trello = "^0.17.1"
-python-dotenv = "^0.17.1"
-
-[tool.poetry.dev-dependencies]
-
 [build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+  build-backend = 'pdm.backend'
+  requires = ['pdm-backend']
+
+[project]
+  dependencies = [
+    'py-trello<1.0.0,>=0.17.1',
+    'python-dotenv<1.0.0,>=0.17.1'
+  ]
+  description = ''
+  name = 'trello_move'
+  requires-python = '<4.0,>=3.9'
+  version = '0.1.0'
+
+  [[project.authors]]
+    email = 'thelarisa81@gmail.com'
+    name = 'Larisa Shigareva'
