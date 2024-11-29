@@ -6,7 +6,7 @@ from trello_main import main
 
 MOVE_HOUR = 4
 
-if next(iter(sys.argv[1:])) == "--now":
+if next(iter(sys.argv[1:]), None) == "--now":
     print("executing NOW", flush=True)
     main()
 else:
