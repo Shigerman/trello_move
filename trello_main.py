@@ -32,7 +32,7 @@ def main():
         for list_ in board_lists:
             if list_ is not target_list:
                 # Ability to ignore a list by starting a name with "_"
-                if not list.name.startswith("_"):
+                if not list_.name.startswith("_"):
                     list_.move_all_cards(target_list)
 
 
