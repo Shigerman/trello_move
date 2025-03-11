@@ -1,0 +1,13 @@
+services:
+  trello_move:
+    container_name: "trello-move"
+    pull_policy: build
+    build:
+      context: .
+    environment:
+      TRELLO_API_KEY: ${TRELLO_API_KEY}
+      TRELLO_API_SECRET: ${TRELLO_API_SECRET}
+networks:
+  default:
+    name: "app"
+    external: true
