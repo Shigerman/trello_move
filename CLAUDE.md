@@ -50,6 +50,10 @@ Two-module design:
 
 **Note on schedule discrepancy:** `trello_service.py` triggers at 4:00 AM (`MOVE_HOUR = 4`), while the systemd timer (`trello.timer`) fires at 6:00 AM. The systemd setup runs `trello_main.py` directly (bypassing the service scheduler), so the two schedules don't conflict.
 
+## Code Style
+
+Use comments sparingly. Only comment complex code.
+
 ## Deployment Options
 
 - **Raspberry Pi / systemd:** Use `trello.service` + `trello.timer`. The service file still references `poetry run` — update if needed.
