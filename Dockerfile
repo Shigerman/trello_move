@@ -3,4 +3,4 @@ WORKDIR /app
 COPY pyproject.toml uv.lock ./
 RUN uv sync
 COPY *.py ./
-ENTRYPOINT ["uv", "run", "python", "trello_service.py"]
+ENTRYPOINT ["uv", "run", "python", "trello_main.py"]

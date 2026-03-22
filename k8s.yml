@@ -1,0 +1,17 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: trello-move
+spec:
+  schedule: "0 4 * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: trello-move
+              image: server01:5000/trello-move:latest
+              envFrom:
+                - secretRef:
+                    name: trello-move-secret
+          restartPolicy: OnFailure
